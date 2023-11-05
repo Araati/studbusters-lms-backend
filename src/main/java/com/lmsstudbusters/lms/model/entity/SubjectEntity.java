@@ -1,12 +1,20 @@
-package com.lmsstudbusters.lms.model;
+package com.lmsstudbusters.lms.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.With;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@With
 @Entity
 @Table(name = "subject")
 public class SubjectEntity {
@@ -27,7 +35,4 @@ public class SubjectEntity {
     @UpdateTimestamp
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
-
-    public SubjectEntity() {
-    }
 }
